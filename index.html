@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree</title>
+    <style>
+        /* Overall container */
+       *, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 50px;
+  color: #eee9dc;
+  font: 16px Verdana, sans-serif;
+  background: #2e6ba7;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#wrapper {
+  position: relative;
+}
+
+.branch {
+  position: relative;
+  margin-left: 250px;
+}
+.branch:before {
+  content: "";
+  width: 50px;
+  border-top: 2px solid #eee9dc;
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  margin-top: 1px;
+}
+
+.entry {
+  position: relative;
+  min-height: 60px;
+}
+.entry:before {
+  content: "";
+  height: 100%;
+  border-left: 2px solid #eee9dc;
+  position: absolute;
+  left: -50px;
+}
+.entry:after {
+  content: "";
+  width: 50px;
+  border-top: 2px solid #eee9dc;
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  margin-top: 1px;
+}
+.entry:first-child:before {
+  width: 10px;
+  height: 50%;
+  top: 50%;
+  margin-top: 2px;
+  border-radius: 10px 0 0 0;
+}
+.entry:first-child:after {
+  height: 10px;
+  border-radius: 10px 0 0 0;
+}
+.entry:last-child:before {
+  width: 10px;
+  height: 50%;
+  border-radius: 0 0 0 10px;
+}
+.entry:last-child:after {
+  height: 10px;
+  border-top: none;
+  border-bottom: 2px solid #eee9dc;
+  border-radius: 0 0 0 10px;
+  margin-top: -9px;
+}
+.entry.sole:before {
+  display: none;
+}
+.entry.sole:after {
+  width: 50px;
+  height: 0;
+  margin-top: 1px;
+  border-radius: 0;
+}
+
+.label {
+  display: block;
+  min-width: 150px;
+  padding: 5px 10px;
+  line-height: 20px;
+  text-align: center;
+  border: 2px solid #eee9dc;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -15px;
+}
+    </style>
+</head>
+<body>
+    
+
+<div id="wrapper"><span class="label">Bhopa</span>
+  <div class="branch lv1">
+    <div class="entry"><span class="label">Qadir Khan</span></div>
+    <div class="entry"><span class="label">Sahib Khan</span>
+      <div class="branch lv2">
+        <div class="entry"><span class="label">Sonnat Khan</span>
+          <div class="branch lv3">
+            <div class="entry sole"><span class="label">Baig</span>
+              <div class="branch lv4">
+                <div class="entry sole"><span class="label">Nasira Khan</span>
+                  <div class="branch lv5">
+                    <div class="entry sole"><span class="label">Sulman Khan</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entry"><span class="label">Phakar Khan</span>
+          <div class="branch lv3">
+            <div class="entry sole"><span class="label">Dadu</span></div>
+          </div>
+        </div>
+        <div class="entry"><span class="label">Jahangir Khan          </span></div>
+        <div class="entry"><span class="label">Dildar Khan</span></div>
+        <div class="entry"><span class="label">Rajat Khan</span>
+          <div class="branch lv3">
+            <div class="entry sole"><span class="label">Afzal Khan</span>
+              <div class="branch lv4">
+                <div class="entry"><span class="label">Nathan Khan</span>
+                  <div class="branch lv5">
+                    <div class="entry sole"><span class="label">Lilla</span>
+                      <div class="branch lv6">
+                        <div class="entry sole"><span class="label">Akbar</span>
+                          <div class="branch lv7">
+                            <div class="entry"><span class="label">Majid</span></div>
+                            <div class="entry"><span class="label">Khalid</span></div>
+                            <div class="entry"><span class="label">Abid</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="entry"><span class="label">Masta Khan</span>
+                  <div class="branch lv5">
+                    <div class="entry"><span class="label">Hafiz Din Dar</span></div>
+                    <div class="entry"><span class="label">Umar Khan</span>
+                      <div class="branch lv6">
+                        <div class="entry sole"><span class="label">Rafi Muhammad</span></div>
+                      </div>
+                    </div>
+                    <div class="entry"><span class="label">Pera Khan</span></div>
+                    <div class="entry"><span class="label">Kamardi Khan</span></div>
+                    <div class="entry"><span class="label">Kam Dar Khan</span>
+                      <div class="branch lv6">
+                        <div class="entry"><span class="label">First Wife</span>
+                          <div class="branch lv7">
+                            <div class="entry"><span class="label">Ikram Khan</span></div>
+                            <div class="entry"><span class="label">Mualam Khan</span>
+                              <div class="branch lv8">
+                                <div class="entry"><span class="label">Tahir Khan</span>
+                                  <div class="branch lv9">
+                                    <div class="entry"><span class="label">Noor Muhammad</span></div>
+                                    <div class="entry"><span class="label">Mazhar Khan</span>
+                                      <div class="branch lv10">
+                                        <div class="entry"><span class="label">Shafi</span>
+                                          <div class="branch lv11">
+                                            <div class="entry"><span class="label">Muhammad Rafi</span></div>
+                                            <div class="entry"><span class="label">Muhammad Zakki</span></div>
+                                            <div class="entry"><span class="label">Ubaid</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="entry"><span class="label">Shabir</span></div>
+                                      </div>
+                                    </div>
+                                    <div class="entry"><span class="label">Muhammad Azeem</span></div>
+                                    <div class="entry"><span class="label">Muhammad Ali</span></div>
+                                  </div>
+                                </div>
+                                <div class="entry"><span class="label">Samera Khan</span></div>
+                                <div class="entry"><span class="label">Sher Khan</span>
+                                  <div class="branch lv10">
+                                    <div class="entry"><span class="label">Kalu Khan</span>
+                                      <div class="branch lv11">
+                                        <div class="entry"><span class="label">Abdul Aleem Khan</span></div>
+                                        <div class="entry"><span class="label">Basit Ali</span></div>
+                                        <div class="entry"><span class="label">Siraj Din</span>
+                                          <div class="branch lv12">
+                                            <div class="entry sole"><span class="label">Sarfaraz Khan</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="entry"><span class="label">Alamgir Khan</span>
+                                          <div class="branch lv12">
+                                            <div class="entry"><span class="label">Muhammad Yousaf</span></div>
+                                            <div class="entry"><span class="label">Muhammad Aslam</span>
+                                              <div class="branch lv13">
+                                                <div class="entry"><span class="label">Ali</span></div>
+                                                <div class="entry"><span class="label">Toseef</span></div>
+                                                <div class="entry"><span class="label">Rizwan</span></div>
+                                                <div class="entry"><span class="label">Naveed</span></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="entry"><span class="label">Abdul Shakoor</span>
+                                          <div class="branch lv12">
+                                            <div class="entry"><span class="label">Mukhtar Ahmad</span>
+                                              <div class="branch lv13">
+                                                <div class="entry"><span class="label">Haseeb</span></div>
+                                                <div class="entry"><span class="label">Sohail</span></div>
+                                                <div class="entry"><span class="label">Moshin</span></div>
+                                              </div>
+                                            </div>
+                                            <div class="entry"><span class="label">Muhammad Akram</span>
+                                              <div class="branch lv13">
+                                                <div class="entry"><span class="label">Abdul Sammad</span></div>
+                                                <div class="entry"><span class="label">Arif</span></div>
+                                                <div class="entry"><span class="label">Imran</span></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="entry"><span class="label">Bahar Ali</span>
+                                      <div class="branch lv11">
+                                        <div class="entry"><span class="label">Shabir Ahmad</span>
+                                          <div class="branch lv12">
+                                            <div class="entry sole"><span class="label">Zakir Ali</span>
+                                              <div class="branch lv13">
+                                                <div class="entry"><span class="label">Arsalan</span></div>
+                                                <div class="entry"><span class="label">Tanveer</span></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="entry"><span class="label">Munir Khan</span>
+                                          <div class="branch lv12">
+                                            <div class="entry"><span class="label">Shakir Ali</span>
+                                              <div class="branch lv13">
+                                                <div class="entry"><span class="label">Khalid</span></div>
+                                                <div class="entry"><span class="label">Rashid</span></div>
+                                                <div class="entry"><span class="label">Shahid</span></div>
+                                                <div class="entry"><span class="label">Waseem</span></div>
+                                                <div class="entry"><span class="label">Fahim</span></div>
+                                                <div class="entry"><span class="label">Sami</span></div>
+                                              </div>
+                                            </div>
+                                            <div class="entry"><span class="label">Hashim Ali</span></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="entry"><span class="label">Munshi Khan</span></div>
+                                  </div>
+                                </div>
+                                <div class="entry"><span class="label">Haider Khan</span>
+                                  <div class="branch lv10">
+                                    <div class="entry sole"><span class="label">Atta Muhammad</span></div>
+                                  </div>
+                                </div>
+                                <div class="entry"><span class="label">Dalil Khan</span></div>
+                                <div class="entry"><span class="label">Nahar Khan</span>
+                                  <div class="branch lv10">
+                                    <div class="entry sole"><span class="label">Shamsu Deen</span>
+                                      <div class="branch lv11">
+                                        <div class="entry"><span class="label">Nisar Ahmad</span>
+                                          <div class="branch lv12">
+                                            <div class="entry"><span class="label">Saleem</span>
+                                              <div class="branch lv13">
+                                                <div class="entry"><span class="label">Rafay</span></div>
+                                                <div class="entry"><span class="label">Junaid</span></div>
+                                                <div class="entry"><span class="label">Hamza</span></div>
+                                              </div>
+                                            </div>
+                                            <div class="entry"><span class="label">Kaleem</span>
+                                              <div class="branch lv13">
+                                                <div class="entry"><span class="label">Haziq</span></div>
+                                                <div class="entry"><span class="label">Sameed</span></div>
+                                              </div>
+                                            </div>
+                                            <div class="entry"><span class="label">Iqbal</span>
+                                              <div class="branch lv13">
+                                                <div class="entry sole"><span class="label">Ayan</span></div>
+                                              </div>
+                                            </div>
+                                            <div class="entry"><span class="label">Shakeel</span>
+                                              <div class="branch lv13">
+                                                <div class="entry sole"><span class="label">Abdullah</span></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="entry"><span class="label">Abdul Jabbar</span>
+                                          <div class="branch lv12">
+                                            <div class="entry"><span class="label">Abdul Ghaffar</span></div>
+                                            <div class="entry"><span class="label">Qari</span></div>
+                                            <div class="entry"><span class="label">Zulafqar</span></div>
+                                            <div class="entry"><span class="label">Waqar</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="entry"><span class="label">M. Sadaq</span>
+                                          <div class="branch lv12">
+                                            <div class="entry"><span class="label">Waseem</span></div>
+                                            <div class="entry"><span class="label">Fahim</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="entry"><span class="label">Mushtaq Ahmad</span>
+                                          <div class="branch lv12">
+                                            <div class="entry">
+                                              <Aurngzeb></Aurngzeb>
+                                            </div>
+                                            <div class="entry">
+                                              <Masoom></Masoom>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="entry"><span class="label">Zafar Ali Khan</span></div>
+                              </div>
+                            </div>
+                            <div class="entry"><span class="label">Dolat Khan</span></div>
+                          </div>
+                        </div>
+                        <div class="entry"><span class="label">Second Wife</span>
+                          <div class="branch lv7">
+                            <div class="entry"><span class="label">Sapydar Khan</span></div>
+                            <div class="entry"><span class="label">Faiz Muhammad</span></div>
+                            <div class="entry"><span class="label">Faiz Ali</span></div>
+                            <div class="entry"><span class="label">Ibrahim Khan</span></div>
+                            <div class="entry"><span class="label">Sakhawat Khan                                                                                         </span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="entry"><span class="label">Knora Khan</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="entry"><span class="label">Naazir Khan</span></div>
+    <div class="entry"><span class="label">Saleem Khan</span></div>
+    <div class="entry"><span class="label">Ameer Khan</span></div>
+  </div>
+</div><span class="label">Maddan e Khan</span>
+</body>
+</html>
+
+<!-- 
+#wrapper
+  span.label Bhopa
+  .branch.lv1
+    .entry
+      span.label Qadir Khan
+    .entry
+      span.label Sahib Khan
+      .branch.lv2
+        .entry
+          span.label Sonnat Khan
+          .branch.lv3
+            .entry.sole
+              span.label Baig
+              .branch.lv4
+                .entry.sole
+                  span.label Nasira Khan
+                  .branch.lv5
+                    .entry.sole
+                      span.label Sulman Khan
+        .entry
+          span.label Phakar Khan
+          .branch.lv3
+            .entry.sole
+              span.label Dadu
+        .entry
+          span.label Jahangir Khan          
+        .entry
+          span.label Dildar Khan
+        .entry
+          span.label Rajat Khan
+          .branch.lv3
+            .entry.sole
+              span.label Afzal Khan
+              .branch.lv4
+                .entry
+                  span.label Nathan Khan
+                  .branch.lv5
+                    .entry.sole
+                      span.label Lilla
+                      .branch.lv6
+                        .entry.sole
+                          span.label Akbar
+                          .branch.lv7
+                            .entry
+                              span.label Majid
+                            .entry
+                              span.label Khalid
+                            .entry
+                              span.label Abid
+                .entry
+                  span.label Masta Khan
+                  .branch.lv5
+                    .entry
+                      span.label Hafiz Din Dar
+                    .entry
+                      span.label Umar Khan
+                      .branch.lv6
+                        .entry.sole
+                          span.label Rafi Muhammad
+                    .entry
+                      span.label Pera Khan
+                    .entry
+                      span.label Kamardi Khan
+                    .entry
+                      span.label Kam Dar Khan
+                      .branch.lv6
+                        .entry
+                          span.label First Wife
+                          .branch.lv7
+                            .entry
+                              span.label Ikram Khan
+                            .entry
+                              span.label Mualam Khan
+                              .branch.lv8
+                                .entry
+                                  span.label Tahir Khan
+                                  .branch.lv9
+                                    .entry
+                                      span.label Noor Muhammad
+                                    .entry
+                                      span.label Mazhar Khan
+                                      .branch.lv10
+                                        .entry
+                                          span.label Shafi
+                                          .branch.lv11
+                                            .entry
+                                              span.label Muhammad Rafi
+                                            .entry
+                                              span.label Muhammad Zakki
+                                            .entry
+                                              span.label Ubaid
+                                              
+                                        .entry
+                                          span.label Shabir
+                                    .entry
+                                      span.label Muhammad Azeem
+                                    .entry
+                                      span.label Muhammad Ali
+                                .entry
+                                  span.label Samera Khan
+                                .entry
+                                  span.label Sher Khan
+                                  .branch.lv10
+                                    .entry
+                                      span.label Kalu Khan
+                                      .branch.lv11
+                                        .entry
+                                          span.label Abdul Aleem Khan
+                                        .entry
+                                          span.label Basit Ali
+                                        .entry
+                                          span.label Siraj Din
+                                          .branch.lv12
+                                            .entry.sole
+                                              span.label Sarfaraz Khan
+                                        .entry
+                                          span.label Alamgir Khan
+                                          .branch.lv12
+                                            .entry
+                                              span.label Muhammad Yousaf
+                                            .entry
+                                              span.label Muhammad Aslam
+                                              .branch.lv13
+                                                .entry
+                                                  span.label Ali
+                                                .entry
+                                                  span.label Toseef
+                                                .entry
+                                                  span.label Rizwan
+                                                .entry
+                                                  span.label Naveed
+                                        .entry
+                                          span.label Abdul Shakoor
+                                          .branch.lv12
+                                            .entry
+                                              span.label Mukhtar Ahmad
+                                              .branch.lv13
+                                                .entry
+                                                  span.label Haseeb
+                                                .entry
+                                                  span.label Sohail
+                                                .entry
+                                                  span.label Moshin
+                                            .entry
+                                              span.label Muhammad Akram
+                                              .branch.lv13
+                                                .entry
+                                                  span.label Abdul Sammad
+                                                .entry
+                                                  span.label Arif
+                                                .entry
+                                                  span.label Imran
+                                    .entry
+                                      span.label Bahar Ali
+                                      .branch.lv11
+                                        .entry
+                                          span.label Shabir Ahmad
+                                          .branch.lv12
+                                            .entry.sole
+                                              span.label Zakir Ali
+                                              .branch.lv13
+                                                .entry
+                                                  span.label Arsalan
+                                                .entry
+                                                  span.label Tanveer
+                                        .entry
+                                          span.label Munir Khan
+                                          .branch.lv12
+                                            .entry
+                                              span.label Shakir Ali
+                                              .branch.lv13
+                                                .entry
+                                                  span.label Khalid
+                                                .entry
+                                                  span.label Rashid
+                                                .entry
+                                                  span.label Shahid
+                                                .entry
+                                                  span.label Waseem
+                                                .entry
+                                                  span.label Fahim
+                                                .entry
+                                                  span.label Sami
+                                            .entry
+                                              span.label Hashim Ali
+                                    .entry
+                                      span.label Munshi Khan
+                                .entry
+                                  span.label Haider Khan
+                                  .branch.lv10
+                                    .entry.sole
+                                      span.label Atta Muhammad
+                                .entry
+                                  span.label Dalil Khan
+                                .entry
+                                  span.label Nahar Khan
+                                  .branch.lv10
+                                    .entry.sole
+                                      span.label Shamsu Deen
+                                      .branch.lv11
+                                        .entry
+                                          span.label Nisar Ahmad
+                                          .branch.lv12
+                                            .entry
+                                              span.label Saleem
+                                              .branch.lv13
+                                                .entry
+                                                  span.label Rafay
+                                                .entry
+                                                  span.label Junaid
+                                                .entry
+                                                  span.label Hamza
+                                            .entry
+                                              span.label Kaleem
+                                              .branch.lv13
+                                                .entry
+                                                  span.label Haziq
+                                                .entry
+                                                  span.label Sameed
+                                            .entry
+                                              span.label Iqbal
+                                              .branch.lv13
+                                                .entry.sole
+                                                  span.label Ayan
+                                            .entry
+                                              span.label Shakeel
+                                              .branch.lv13
+                                                .entry.sole
+                                                  span.label Abdullah
+                                        .entry
+                                          span.label Abdul Jabbar
+                                          .branch.lv12
+                                            .entry
+                                              span.label Abdul Ghaffar
+                                            .entry
+                                              span.label Qari
+                                            .entry
+                                              span.label Zulafqar
+                                            .entry
+                                              span.label Waqar
+                                        .entry
+                                          span.label M. Sadaq
+                                          .branch.lv12
+                                            .entry
+                                              span.label Waseem
+                                            .entry
+                                              span.label Fahim
+                                        .entry
+                                          span.label Mushtaq Ahmad
+                                          .branch.lv12
+                                            .entry
+                                              Aurngzeb
+                                            .entry
+                                              Masoom
+                                .entry
+                                  span.label Zafar Ali Khan
+                            .entry
+                              span.label Dolat Khan
+                        .entry
+                          span.label Second Wife
+                          .branch.lv7
+                            .entry
+                              span.label Sapydar Khan
+                            .entry
+                              span.label Faiz Muhammad
+                            .entry
+                              span.label Faiz Ali
+                            .entry
+                              span.label Ibrahim Khan
+                            .entry
+                              span.label Sakhawat Khan                                                                                         
+                .entry
+                  span.label Knora Khan
+    .entry
+      span.label Naazir Khan
+    .entry
+      span.label Saleem Khan
+    .entry
+      span.label Ameer Khan
+span.label Maddan e Khan
+ -->
